@@ -5,7 +5,7 @@ use core::{cmp, fmt, mem, slice};
 #[cfg(feature = "alloc")]
 use alloc::{string::String, vec::Vec};
 
-#[cfg(feature = "alloc")]
+#[cfg(feature = "alloc")
 use crate::{io_alloc, Lines, Split};
 use crate::{Error, ErrorKind, IoSlice, IoSliceMut, Result};
 
@@ -44,6 +44,7 @@ pub(crate) fn default_read_exact<R: Read + ?Sized>(this: &mut R, mut buf: &mut [
     }
 }
 
+#[derive(Debug)]
 pub struct Bytes<R> {
     inner: R,
 }
