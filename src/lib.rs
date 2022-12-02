@@ -32,7 +32,7 @@ pub use error::{Error, ErrorKind, ErrorTrait, Result};
 #[cfg(all(not(feature = "std"), feature = "alloc"))]
 pub use io_alloc::{BufReader, BufWriter, IntoInnerError, LineWriter, Lines, Split};
 #[cfg(not(feature = "std"))]
-pub use io_core::{BufRead, Cursor, Read, Seek, SeekFrom, Write};
+pub use io_core::{Bytes, BufRead, Cursor, Read, Seek, SeekFrom, Write};
 #[cfg(not(feature = "std"))]
 pub use io_slice::{IoSlice, IoSliceMut};
 #[cfg(not(feature = "std"))]
